@@ -55,4 +55,7 @@ bot.on(['/img'], function(msg) {
   });
 });
 
+// New code here
+
+
 bot.connect();
