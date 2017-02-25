@@ -1,0 +1,22 @@
+{
+  "name": "telechan",
+  "version": "1.0.0",
+  "description": "A telegram bot for managing a telegram channel build with node.js and telebot repository",
+  "main": "telechan.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nunnoXYZ/Telechan.git"
+  },
+  "author": "nunnoXYZ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nunnoXYZ/Telechan/issues"
+  },
+  "homepage": "https://github.com/nunnoXYZ/Telechan#readme",
+  "dependencies": {
+    "telebot": "^1.0.7"
+  }
+}
