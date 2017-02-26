@@ -14,6 +14,14 @@ bot.on('text', function(msg) {
   console.log(`[Logs] ${ msg.from.first_name } ${ msg.chat.id } ${ msg.text }`);
 });
 
+// ping telechan
+bot.on('/ping', msg => {
+  let id = msg.user.id;
+  let firstName = msg.from.first_name;
+  let reply = msg.message_id;
+  return bot.sendMessage(id, `Pong, ${ firstName }! como vas ?`);
+});
+
 bot.on('/about', msg => {
   let id = msg.chat.id;
   let reply = msg.message_id;
