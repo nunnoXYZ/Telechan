@@ -15,6 +15,10 @@
   "bugs": {
     "url": "https://github.com/nunnoXYZ/Telechan/issues"
   },
+  "scripts": {
+    "start": "NODE_ENV=development node telechan.js",
+    "startprod": "NODE_ENV=production node telechan.js"
+  },
   "homepage": "https://github.com/nunnoXYZ/Telechan#readme",
   "dependencies": {
     "telebot": "^1.0.7"
