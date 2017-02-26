@@ -16,7 +16,8 @@ bot.on('text', function(msg) {
 
 // ping telechan
 bot.on('/ping', msg => {
-  let id = @telechantesting;
+  var id = msg.chat.id;
+  // let id = @telechantesting;
   let firstName = msg.from.first_name;
   return bot.sendMessage(id, `Pong, ${ firstName }! Testing`);
 });
