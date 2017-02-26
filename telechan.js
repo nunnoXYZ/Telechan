@@ -1,7 +1,6 @@
 const TeleBot = require('telebot');
 const config = require('./config');
 
-console.log(config.token)
 const bot = new TeleBot({
   token: config.token, // Add telegram token bot here.
   sleep: 1000, // Optional. How often check updates (in ms).
