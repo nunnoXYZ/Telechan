@@ -1,5 +1,5 @@
 const config = {
-    token: process.env.TOKEN,
+    token: process.TOKEN,
 }
 
 module.exports = config
