@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nunnoXYZ/Telechan#readme",
   "dependencies": {
+    "child_process": "^1.0.2",
     "telebot": "^1.0.7"
   }
 }
