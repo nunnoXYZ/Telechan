@@ -4,7 +4,8 @@
   "description": "A telegram bot for managing a telegram channel build with node.js and telebot repository",
   "main": "telechan.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=development node telechan.js",
+    "startprod": "NODE_ENV=production node telechan.js"
   },
   "repository": {
     "type": "git",
