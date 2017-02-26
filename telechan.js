@@ -17,9 +17,8 @@ bot.on('text', function(msg) {
 // ping telechan
 bot.on('/ping', msg => {
   var id = msg.chat.id;
-  // let id = @telechantesting;
   let firstName = msg.from.first_name;
-  return bot.sendMessage(id, `Pong, ${ firstName }! Testing`);
+  bot.sendMessage(id, `Pong, ${ firstName }! Testing`);
 });
 
 bot.on('/about', msg => {
@@ -27,7 +26,7 @@ bot.on('/about', msg => {
   let reply = msg.message_id;
   const execSync = require('child_process').execSync;
   uptime = execSync('uptime');
-  return bot.sendMessage(id, `Telechan v0.1` + '\n' + uptime, { reply });
+  bot.sendMessage(id, `Telechan v0.1` + '\n' + uptime, { reply });
 
 });
 
