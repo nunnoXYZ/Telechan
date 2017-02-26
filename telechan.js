@@ -1,8 +1,9 @@
 const TeleBot = require('telebot');
 const config = require('./config');
 
+console.log(config.token)
 const bot = new TeleBot({
-  token: process.TOKEN, // Add telegram token bot here.
+  token: config.token, // Add telegram token bot here.
   sleep: 1000, // Optional. How often check updates (in ms).
   timeout: 0, // Optional. Update pulling timeout (0 - short polling).
   limit: 100, // Optional. Limits the number of updates to be retrieved.
