@@ -16,14 +16,14 @@ bot.on('text', function(msg) {
 
 // ping telechan
 bot.on('/ping', msg => {
-  let id = msg.user.id;
+  let id = msg.from.id;
   let firstName = msg.from.first_name;
   let reply = msg.message_id;
   return bot.sendMessage(id, `Pong, ${ firstName }! como vas ?`);
 });
 
 bot.on('/about', msg => {
-  let id = msg.chat.id;
+  let id = msg.from.id;
   let reply = msg.message_id;
   const execSync = require('child_process').execSync;
   uptime = execSync('uptime');
