@@ -14,13 +14,24 @@ bot.on('text', function(msg) {
   console.log(`[Logs] ${ msg.from.first_name } ${ msg.chat.id } ${ msg.text }`);
 });
 
+// Send URL
+bot.on('/url', msg => {
+  
+  // var id = msg.chat.id;
+  var chan = config.channelName;
+  console.log(chan)
+  let firstName = msg.from.first_name;
+  bot.sendMessage(chan, `https://desarrolloactivo.com/articulos/berryboot/`);
+});
+
+
 // ping telechan bot
 bot.on('/ping', msg => {
   // var id = msg.chat.id;
   var chan = config.channelName;
   console.log(chan)
   let firstName = msg.from.first_name;
-  bot.sendMessage(chan, `Pong,Test...`);
+  bot.sendMessage(chan, `https://desarrolloactivo.com/articulos/berryboot/`);
 });
 
 bot.on('/about', msg => {
