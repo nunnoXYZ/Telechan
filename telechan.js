@@ -14,11 +14,13 @@ bot.on('text', function(msg) {
   console.log(`[Logs] ${ msg.from.first_name } ${ msg.chat.id } ${ msg.text }`);
 });
 
-// ping telechan
+// ping telechan bot
 bot.on('/ping', msg => {
-  var id = msg.chat.id;
+  // var id = msg.chat.id;
+  var chan = '@ChannelName';
+  console.log(chan)
   let firstName = msg.from.first_name;
-  bot.sendMessage(id, `Pong, ${ firstName }! Testing`);
+  bot.sendMessage(chan, `Pong,Test...`);
 });
 
 bot.on('/about', msg => {
