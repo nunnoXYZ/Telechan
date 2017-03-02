@@ -16,11 +16,9 @@ bot.on('text', function(msg) {
 
 // Send URL
 bot.on('/url', url => {
-  console.log(url);
-  var chan = config.channelName;
-  console.log(chan);
-  let firstName = msg.from.first_name;
-  bot.sendMessage(chan, url);
+  let [link, test] = msg.text.split(' ');
+  let chan = config.channelName;
+  bot.sendMessage(chan, `Url , ${ link } ${ test }!`);
 });
 
 
