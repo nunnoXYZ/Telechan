@@ -15,13 +15,12 @@ bot.on('text', function(msg) {
 });
 
 // Send URL
-bot.on('/url', msg => {
-  
-  // var id = msg.chat.id;
+bot.on('/url', url => {
+  console.log(url);
   var chan = config.channelName;
-  console.log(chan)
+  console.log(chan);
   let firstName = msg.from.first_name;
-  bot.sendMessage(chan, `https://desarrolloactivo.com/articulos/berryboot/`);
+  bot.sendMessage(chan, url);
 });
 
 
