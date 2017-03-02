@@ -16,7 +16,7 @@ bot.on('text', function(msg) {
 
 // Send URL
 bot.on('/url', url => {
-  let [link, test] = msg.text.split(' ');
+  let [link, test] = url.text.split(' ');
   let chan = config.channelName;
   bot.sendMessage(chan, `Url , ${ link } ${ test }!`);
 });
