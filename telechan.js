@@ -17,7 +17,7 @@ bot.on('text', function(msg) {
 // ping telechan bot
 bot.on('/ping', msg => {
   // var id = msg.chat.id;
-  var chan = '@ChannelName';
+  var chan = config.channelName;
   console.log(chan)
   let firstName = msg.from.first_name;
   bot.sendMessage(chan, `Pong,Test...`);
