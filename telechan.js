@@ -1,5 +1,6 @@
 const TeleBot = require('telebot');
 const config = require('./config');
+const chan = config.channelName;
 
 const bot = new TeleBot({
   token: config.token, // Add telegram token bot here.
@@ -17,7 +18,6 @@ bot.on('text', function(msg) {
 // Send URL
 bot.on('/url', url => {
   let [link, test] = url.text.split(' ');
-  let chan = config.channelName;
   bot.sendMessage(chan, `${ link } ${ test }`);
 });
 
@@ -25,8 +25,6 @@ bot.on('/url', url => {
 // ping telechan bot
 bot.on('/ping', msg => {
   // var id = msg.chat.id;
-  var chan = config.channelName;
-  console.log(chan)
   let firstName = msg.from.first_name;
   bot.sendMessage(chan, `https://desarrolloactivo.com/articulos/berryboot/`);
 });
