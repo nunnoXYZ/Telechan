@@ -2,7 +2,8 @@
 A telegram bot for managing a telegram channel build with node.js and telebot repository
 
 # Evieroment
-source env.sh (establecemos las variables de entorno)
+Set the environment variables to work with your bot
+source env.sh
 
 # Features
 - Send message to channel from bot
