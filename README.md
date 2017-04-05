@@ -2,7 +2,7 @@
 A telegram bot for managing a telegram channel build with node.js and telebot repository
 
 # Evieroment
-export TOKEN='xxxxxxxxxxxxxxx'
+source env.sh (establecemos las variables de entorno)
 
 # Features
 - Send message to channel from bot
