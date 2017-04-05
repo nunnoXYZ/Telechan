@@ -10,6 +10,22 @@ const bot = new TeleBot({
   retryTimeout: 5000, // Optional. Reconnecting timeout (in ms).
 });
 
+
+// Admin Talk
+bot.on('/admin', msg => {
+  console.log(msg);
+  let adminId = ;
+  let channelId = ;
+  let id = msg.chat.id;
+  if (adminId == msg.chat.id ){
+    var getMessageRaw = JSON.stringify(msg.text);
+    var obj1 = getMessageRaw.slice(7);
+    obj2 = obj1.slice(0, -1);
+    return bot.sendMessage(channelId, '⚠️' + obj2);
+  }
+});
+
+
 // console logs
 bot.on('text', function(msg) {
   console.log(`[Logs] ${ msg.from.first_name } ${ msg.chat.id } ${ msg.text }`);
@@ -24,11 +40,10 @@ bot.on('/url', url => {
 
 // ping telechan bot
 bot.on('/ping', msg => {
-  // var id = msg.chat.id;
-  let firstName = msg.from.first_name;
-  bot.sendMessage(chan, `https://desarrolloactivo.com/articulos/berryboot/`);
+  bot.sendMessage(chan, `pong`);
 });
 
+// about
 bot.on('/about', msg => {
   let id = msg.from.id;
   let reply = msg.message_id;
@@ -36,6 +51,14 @@ bot.on('/about', msg => {
   uptime = execSync('uptime');
   bot.sendMessage(id, `Telechan v0.1` + '\n' + uptime, { reply });
 
+});
+
+// ping telechan bot
+
+bot.on('/ping' + `${ msg.text }` , msg => {
+  let link = msg.text;
+  // var id = msg.chat.id;
+  bot.sendMessage(chan, link);
 });
 
 bot.connect();
