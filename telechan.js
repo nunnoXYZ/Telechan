@@ -2,6 +2,9 @@ const TeleBot = require('telebot');
 const config = require('./config');
 const chan = config.channelName;
 
+const adminID = config.adminlID;
+const channelID = config.channelID;
+
 const bot = new TeleBot({
   token: config.token, // Add telegram token bot here.
   sleep: 1000, // Optional. How often check updates (in ms).
@@ -10,12 +13,10 @@ const bot = new TeleBot({
   retryTimeout: 5000, // Optional. Reconnecting timeout (in ms).
 });
 
-
 // Admin Talk
 bot.on('/admin', msg => {
-  console.log(msg);
-  let adminId = ;
-  let channelId = ;
+  let adminId = adminID;
+  let channelId = channelID;
   let id = msg.chat.id;
   if (adminId == msg.chat.id ){
     var getMessageRaw = JSON.stringify(msg.text);
@@ -24,7 +25,6 @@ bot.on('/admin', msg => {
     return bot.sendMessage(channelId, '⚠️' + obj2);
   }
 });
-
 
 // console logs
 bot.on('text', function(msg) {
