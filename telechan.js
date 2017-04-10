@@ -54,7 +54,6 @@ bot.on('/about', msg => {
 });
 
 // ping telechan bot
-
 bot.on('/ping' + `${ msg.text }` , msg => {
   let link = msg.text;
   // var id = msg.chat.id;
